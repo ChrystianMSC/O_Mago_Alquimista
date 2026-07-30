@@ -6,13 +6,25 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(src)
 
-file(GLOB SOURCES "src/*.cpp")
-
-add_executable(MagoAlquimista ${SOURCES}
-        src/Tipos.hpp
-        src/Ingrediente.hpp
-        src/Pocao.hpp
-        src/Alquimista.hpp
+# Lista explícita de todos os arquivos .cpp
+set(SOURCES
         src/Alquimista.cpp
+        src/Caldeirao.cpp
+        src/GeradorProcedural.cpp
+        src/Mercado.cpp
+        src/main.cpp
+        src/Mercado.cpp
+)
+
+add_executable(MagoAlquimista ${SOURCES})
+
+# Adicionar os headers também para visibilidade no IDE
+target_sources(MagoAlquimista PRIVATE
+        src/Alquimista.hpp
         src/Caldeirao.hpp
-        src/Caldeirao.cpp)
+        src/GeradorProcedural.hpp
+        src/Ingrediente.hpp
+        src/Mercado.hpp
+        src/Pocao.hpp
+        src/Tipos.hpp
+)

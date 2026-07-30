@@ -1,5 +1,7 @@
+// src/Tipos.hpp
 #pragma once
 #include <string>
+#include <chrono>
 
 enum class AtributoMagico {
     HEAL,
@@ -29,14 +31,14 @@ namespace Color {
 // Convert enum to formatted text
 inline std::string attributeToString(AtributoMagico attr) {
     switch (attr) {
-    case AtributoMagico::HEAL:       return Color::GREEN + "Heal" + Color::RESET;
-    case AtributoMagico::VITALITY:   return Color::RED + "Vitality" + Color::RESET;
-    case AtributoMagico::FIRE:       return Color::ORANGE + "Fire" + Color::RESET;
-    case AtributoMagico::ICE:        return Color::BLUE + "Ice" + Color::RESET;
-    case AtributoMagico::POISON:     return Color::PURPLE + "Poison" + Color::RESET;
-    case AtributoMagico::PROTECTION: return Color::GRAY + "Protection" + Color::RESET;
-    case AtributoMagico::LEVITATION: return Color::PINK + "Levitation" + Color::RESET;
-    case AtributoMagico::MYSTERY:    return Color::YELLOW + "Mystery" + Color::RESET;
+    case AtributoMagico::HEAL:       return Color::GREEN + "Cura" + Color::RESET;
+    case AtributoMagico::VITALITY:   return Color::RED + "Vitalidade" + Color::RESET;
+    case AtributoMagico::FIRE:       return Color::ORANGE + "Fogo" + Color::RESET;
+    case AtributoMagico::ICE:        return Color::BLUE + "Gelo" + Color::RESET;
+    case AtributoMagico::POISON:     return Color::PURPLE + "Veneno" + Color::RESET;
+    case AtributoMagico::PROTECTION: return Color::GRAY + "Proteção" + Color::RESET;
+    case AtributoMagico::LEVITATION: return Color::PINK + "Levitação" + Color::RESET;
+    case AtributoMagico::MYSTERY:    return Color::YELLOW + "Mistério" + Color::RESET;
     }
-    return "Unknown";
+    return "Desconhecido";
 }
